@@ -55,16 +55,21 @@ alias pico='edit'
 alias spico='sedit'
 alias nano='edit'
 alias snano='sedit'
-
-#custom alias gr
-#alias mqstat='qstat -a -u mtmoulds'
-#alias qstatm='qstat -a -u mtmoulds'
-#alias mhome='ssh max@local.apartment.maxmoulds.net'
+ 
 #alias sweephomepng="rsync -r *.png max@local.apartment.maxmoulds.net:img/$(date --rfc-3339=ns | cut -d' ' -f1)/"
 #alias tester="echo $(date --rfc-3339=ns | cut -d' ' -f1)"
 
+#git stuffs .i
+git --version 2>&1 >/dev/null # improvement by tripleee
+GIT_IS_AVAILABLE=$?
+# ...
+if [ $GIT_IS_AVAILABLE -eq 0 ]; then #...
+git config --global user.name "SamMorey@$HOSTNAME"
+git config --global user.email "6740675+SamMorey@users.noreply.github.com"
+fi
+
 #chromeos stuffs
-alias cvim="sudo enter-chroot -b -n xenial xiwi -T xfce4-terminal && sleep 1 && exit && exit"
+alias cvim="sudo enter-chroot -b -n xenial xiwi -T xfce4-terminal && exit && exit"
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1

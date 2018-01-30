@@ -23,8 +23,9 @@ set tabstop=3		" ts, number of spaces that a tab is equivalent to
 set shiftwidth=3	" sw, number of spaces shifted left and righ when issuing << and >>
 			"  commands
 set softtabstop=3
+set mouse=a
 set expandtab
-" set textwidth=80
+set textwidth=0
 set number		" number lines
 set nocompatible
 set incsearch
@@ -136,25 +137,6 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
-
-" requires vim-python and python-git
-function! CommitFile()
-python << EOF
-import vim, git 
-curfile = vim.current.buffer.name
-if curfile:
-    try:
-        repo = git.Repo(curfile)
-        repo.git.add(curfile)
-        repo.git.commit(m='Update')
-    except (git.InvalidGitRepositoryError, git.GitCommandError):
-        pass
-EOF
-endfunction
-au BufWritePost * call CommitFile()
-
-
-
 
 
 
