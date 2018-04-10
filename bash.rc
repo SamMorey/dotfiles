@@ -727,3 +727,22 @@ function __setprompt
 	PS4='\[${DARKGRAY}\]+\[${NOCOLOR}\] '
 }
 PROMPT_COMMAND='__setprompt'
+
+   
+
+
+
+
+
+
+
+
+
+alias dev1='ssh ox_tutor@45.79.180.132'
+alias dev2='ssh ox_tutor@45.33.49.41' #This is Anya's
+alias dev3='ssh ox_tutor@173.255.246.36' 
+alias dev4='ssh ox_tutor@45.79.68.186' #Should be mas
+alias dev5='ssh ox_tutor@45.33.28.40' #Nick's
+alias moreys='ssh moreys@flip.engr.oregonstate.edu' #School Server
+alias lintab='sudo startxfce4 -n xenial -X xiwi-tab' #Open linux in a tab
+alias os2= 'ssh moreys@os2.engr.oregonstate.edu' #Ssh into OS2 server 
