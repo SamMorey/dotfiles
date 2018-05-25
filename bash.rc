@@ -69,7 +69,9 @@ git config --global user.email "6740675+SamMorey@users.noreply.github.com"
 fi
 
 #chromeos stuffs
-alias cvim="sudo enter-chroot -b -n xenial xiwi -T xfce4-terminal && exit && exit"
+#For Chrome OS shorter commands to enter CHROOT
+alias cvim="sudo enter-chroot -b -n xenial xiwi -T xfce4-terminal && exit"
+alias lintab="sudo startxfce4 -n xenial -X xiwi-tab" #Open linux in a tab
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
@@ -745,4 +747,5 @@ alias dev4='ssh ox_tutor@45.79.68.186' #Should be mas
 alias dev5='ssh ox_tutor@45.33.28.40' #Nick's
 alias moreys='ssh moreys@flip.engr.oregonstate.edu' #School Server
 alias lintab='sudo startxfce4 -n xenial -X xiwi-tab' #Open linux in a tab
-alias os2= 'ssh moreys@os2.engr.oregonstate.edu' #Ssh into OS2 server 
+alias os2='ssh moreys@os2.engr.oregonstate.edu' #Ssh into OS2 server 
+
